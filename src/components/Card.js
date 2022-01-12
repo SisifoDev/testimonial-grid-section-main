@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 export default function Card({ title, quote, author, graduate, image }) {
-  console.log(image);
   return (
     <CardWrapper>
       <Avatar>

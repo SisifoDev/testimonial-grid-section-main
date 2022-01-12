@@ -21,7 +21,8 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--lightGrayishBlue);
   margin: 0;
   padding: 0;
-  
+  border-collapse: collapse;
+  border-spacing:0;
   font-family: "Barlow Semi Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   .attribution {
     font-size: 11px;
     text-align: center;
+    width: 100vw;
   }
   .attribution a {
     color: var(--attribution);

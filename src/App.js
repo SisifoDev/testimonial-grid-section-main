@@ -77,8 +77,7 @@ function App() {
           ></Card>
         ))}
       </QuoteContainer>
-
-      <div class="attribution">
+      <div className="attribution">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io?ref=challenge"
@@ -111,7 +110,8 @@ const QuoteContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-auto-rows: 160px;
   /* grid-auto-flow: row dense; */
-  padding: 160px;
+  padding: 150px;
+  overflow-x: hidden;
 
   @media (max-width: 1199.98px) {
     display: flex;
