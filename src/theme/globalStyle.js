@@ -18,10 +18,18 @@ const GlobalStyle = createGlobalStyle`
 
 }
   body {
+    background-color: var(--lightGrayishBlue);
   margin: 0;
+  padding: 0;
+  
   font-family: "Barlow Semi Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
   }
 
   .attribution {

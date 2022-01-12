@@ -1,8 +1,13 @@
+import styled from "styled-components";
+
+import Card from "./components/Card";
+
 function App() {
   const quotes = [
     {
       id: 1,
       author: "Daniel Clifford",
+      imageURL: "img/image-daniel.jpg",
       verifedGraduate: true,
       title:
         "I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.",
@@ -15,6 +20,7 @@ function App() {
     {
       id: 2,
       author: "Jonathan Walters",
+      imageURL: "img/image-jonathan.jpg",
       verifedGraduate: true,
       title: "The team was very supportive and kept me motivated",
       quote: `“I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
@@ -22,26 +28,8 @@ function App() {
     },
     {
       id: 3,
-      author: "Jeanette Harmon",
-      verifedGraduate: true,
-      title: "An overall wonderful and rewarding experience",
-      quote: `“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
-      while doing something I love. ”`,
-    },
-    {
-      id: 4,
-      author: "Patrick Abrams",
-      verifedGraduate: true,
-      title:
-        "Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.",
-      quote: `“ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
-      gave me the confidence necessary to be able to go out in the world and present myself as a capable 
-      junior developer. The standard is above the rest. You will get the personal attention you need from 
-      an incredible community of smart and amazing people. ”`,
-    },
-    {
-      id: 5,
       author: "Kira Whittle",
+      imageURL: "img/image-kira.jpg",
       verifedGraduate: true,
       title: "Such a life-changing experience. Highly recommended!",
       quote: `“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
@@ -53,10 +41,42 @@ function App() {
       experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
       100% recommend! ”`,
     },
+    {
+      id: 5,
+      author: "Jeanette Harmon",
+      imageURL: "img/image-jeanette.jpg",
+      verifedGraduate: true,
+      title: "An overall wonderful and rewarding experience",
+      quote: `“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+      while doing something I love. ”`,
+    },
+    {
+      id: 4,
+      author: "Patrick Abrams",
+      imageURL: "img/image-patrick.jpg",
+      verifedGraduate: true,
+      title:
+        "Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.",
+      quote: `“ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+      gave me the confidence necessary to be able to go out in the world and present myself as a capable 
+      junior developer. The standard is above the rest. You will get the personal attention you need from 
+      an incredible community of smart and amazing people. ”`,
+    },
   ];
   return (
-    <div>
-      <h1>MyApp</h1>
+    <Main>
+      <QuoteContainer>
+        {quotes.map((quote) => (
+          <Card
+            key={quote.id}
+            quote={quote.quote}
+            title={quote.title}
+            author={quote.author}
+            image={quote.imageURL}
+            graduate={quote.verifedGraduate}
+          ></Card>
+        ))}
+      </QuoteContainer>
 
       <div class="attribution">
         Challenge by{" "}
@@ -73,8 +93,35 @@ function App() {
         </a>
         .
       </div>
-    </div>
+    </Main>
   );
 }
 
 export default App;
+
+const Main = styled.main`
+  width: 100vw;
+  height: 100vh;
+`;
+
+const QuoteContainer = styled.div`
+  display: grid;
+  /* place-items: center; */
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 160px;
+  /* grid-auto-flow: row dense; */
+  padding: 160px;
+
+  @media (max-width: 1199.98px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px 20px;
+  }
+
+  @media (max-width: 575.98px) {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 20px;
+  }
+`;
