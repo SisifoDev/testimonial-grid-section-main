@@ -107,8 +107,8 @@ const QuoteContainer = styled.div`
   display: grid;
   /* place-items: center; */
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-auto-rows: 160px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
   /* grid-auto-flow: row dense; */
   padding: 150px;
   overflow-x: hidden;

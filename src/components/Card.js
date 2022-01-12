@@ -18,7 +18,7 @@ export default function Card({ title, quote, author, graduate, image }) {
 }
 
 const CardWrapper = styled.div`
-  padding: 40px;
+  padding: 35px;
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -31,8 +31,7 @@ const CardWrapper = styled.div`
   color: var(--White);
 
   &:nth-child(1) {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
+    grid-column: span 2;
     background-color: var(--moderateViolet);
     background-image: url(img/bg-pattern-quotation.svg);
     background-size: 132px;
@@ -43,30 +42,45 @@ const CardWrapper = styled.div`
   &:nth-child(2) {
     grid-column-end: span 1;
     background-color: var(--veryDarkGrayishBlue);
+    @media (max-width: 1439px) {
+      grid-column: 2;
+      grid-row: 3 / span 2;
+    }
   }
 
   &:nth-child(3) {
-    grid-row-end: span 4;
-    grid-column-end: span 1;
+    grid-column: 4;
+    grid-row: 1 / span 2;
     background-color: var(--White);
     color: var(--veryDarkGrayishBlue);
-
+    @media (max-width: 1439px) {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+    }
     @media (max-width: 575.98px) {
       order: 4;
     }
   }
 
   &:nth-child(4) {
-    grid-column-start: span 1;
-    grid-row-start: 3;
+    grid-column: 1 / span 1;
+    grid-row: 2;
     background-color: var(--White);
     color: var(--veryDarkGrayishBlue);
+    @media (max-width: 1439px) {
+      grid-column: 1;
+      grid-row: 3;
+    }
   }
 
   &:nth-child(5) {
     grid-column-end: span 2;
     background-color: var(--VeryDarkBlackishBlue);
     color: var(--lightGrayishBlue);
+    @media (max-width: 1439px) {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
   }
 `;
 
