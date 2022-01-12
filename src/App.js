@@ -107,10 +107,10 @@ const QuoteContainer = styled.div`
   display: grid;
   /* place-items: center; */
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(260px, 1fr));
   /* grid-auto-flow: row dense; */
-  padding: 160px;
+  padding: 170px;
 
   @media (max-width: 1199.98px) {
     display: flex;

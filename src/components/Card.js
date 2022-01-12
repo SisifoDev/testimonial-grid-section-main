@@ -23,7 +23,7 @@ const CardWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -117,6 +117,6 @@ const Paragraph = styled.p`
 `;
 
 const Title = styled.h1`
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 20px 0;
 `;
