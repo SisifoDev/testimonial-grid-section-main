@@ -102,7 +102,7 @@ const Paragraph = styled.p`
   opacity: 0.7;
 `;
 
-const Title = styled.h3`
+const Title = styled.h1`
   font-size: 1.3rem;
   margin: 20px 0;
 `;
