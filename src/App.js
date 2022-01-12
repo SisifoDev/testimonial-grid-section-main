@@ -111,7 +111,6 @@ const QuoteContainer = styled.div`
   grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
   /* grid-auto-flow: row dense; */
   padding: 150px;
-  overflow-x: hidden;
 
   @media (max-width: 1199.98px) {
     display: flex;

@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   border-collapse: collapse;
   border-spacing:0;
+  font-size: var(--fontSize);
   font-family: "Barlow Semi Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
