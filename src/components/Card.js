@@ -18,7 +18,7 @@ export default function Card({ title, quote, author, graduate, image }) {
 }
 
 const CardWrapper = styled.div`
-  padding: 35px;
+  padding: 30px;
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -117,6 +117,6 @@ const Paragraph = styled.p`
 `;
 
 const Title = styled.h1`
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 20px 0;
 `;
